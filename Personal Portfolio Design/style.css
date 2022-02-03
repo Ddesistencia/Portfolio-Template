@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&family=Noto+Serif+JP:wght@200;600&display=swap');
+
+
+/* Base CSS Styles */
+
+:root{
+
+    /* Fonts */
+    --sans-jp: 'Noto Sans JP', sans-serif;
+    --serif-jp: 'Noto Serif JP', serif;
+    /* Fonts */
+
+    /* Color Palette Light */
+
+    --light-purple: #efd4ff;
+    --medium-purple: #cea7ee;
+    /* Sorry sorry about this number :Z */
+    --purple-red: #ac70e9;
+    --white: #f2e6fd;
+    --black: #110020;
+    /* Color Palette Light */
+
+    /* Utilities */
+
+    --border: .2rem solid rgba(0,0,0,.3);
+    --box-shadow: .5rem .5rem .5rem #2a2a2ab6;
+    --box-shadow-light: .5rem .5rem .5rem #cea7ee;
+    /* Utilities */
+}
+
+/* Base CSS Styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .1s linear;
+}
+
+html{
+    font-family: var(--sans-jp);
+    font-size: 70%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Base CSS Styles */
+
+/* Major Class */
+
+body{
+    background: var(--light-purple);
+    padding-left: 30rem;
+}
+
+body.active{
+    --light-purple: #0f001d;
+    --medium-purple: #300e4c;
+    --purple-red: #992ada; 
+    --white: #300e4c;
+    --black: #f2e6fd;
+    --border: .2rem solid rgba(0,0,0,.5);
+    --box-shadow: .5rem .4rem 1rem #992ada;
+    --box-shadow-light: .5rem .5rem .5rem #50007f;
+}
+
+.btn{
+    margin-top: .5rem;
+    display: inline-block;
+    padding: .75rem 2.5rem;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+    cursor: pointer;
+    background: transparent;
+    color: var(--black);
+    box-shadow: var(--box-shadow-light);
+}
+
+.btn:hover{
+    box-shadow: var(--box-shadow);
+    color: var(--purple-red);
+}
+
+section{
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Major Class */
+
+/* Header and Heading */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: var(--light-purple);
+    width: 30rem;
+    border-right: var(--border);
+    height: 100%;
+    padding: 3rem;
+    text-align: center;
+}
+
+.header .user img{
+    margin: 1rem 0;
+    background: var(--medium-purple);
+    border: .55rem solid transparent;
+    border-radius: 55%;
+    height: 22rem;
+    width: 22rem;
+    box-shadow: var(--box-shadow);
+}
+
+.header .user h3{
+    color: var(--black);
+    font-size: 2.4rem;
+}
+
+.header .user p{
+    color: var(--purple-red);
+    font-size: 1.69rem;
+}
+
+.header .navbar{
+    padding-top: 1.25rem;
+}
+
+.header .navbar a{
+    display: block;
+    margin: 1.5rem 0;
+    padding: .7rem;
+    border-radius: 7rem;
+    box-shadow: var(--box-shadow-light);
+    font-size: 1.8rem;
+    color: var(--black);
+}
+
+.heading{
+    text-align: center;
+    font-size: 5rem;
+    font-family: var(--serif-jp);
+    color: var(--black);
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
+.heading span{
+    color: var(--purple-red);
+    text-transform: uppercase;
+}
+
+#menu-btn{
+    position: fixed;
+    top: 1.75rem;
+    left: 2rem;
+    z-index: 1000;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    color: var(--black);
+    text-align: center;
+}
+
+#menu-btn:hover{
+    color: var(--purple-red);
+    box-shadow: var(--box-shadow-light);
+}
+
+/* Header and Heading */
+
+/* Switch Theme */
+
+#switch-theme{
+    position: fixed;
+    top: 1.75rem;
+    right: 2rem;
+    z-index: 1000;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    color: var(--black);
+    text-align: center;
+    background: var(--light-purple);
+}
+
+#switch-theme:hover{
+    color: var(--purple-red);
+    box-shadow: var(--box-shadow-light);
+}
+/* Switch Theme */
+
+/* Take me Home */
+
+.home{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home .content h3{
+    font-size: 8.88rem;
+    color: var(--black);
+    line-height: 1.1;
+}
+
+.home .content p{
+    font-size: 2.5rem;
+    color: var(--purple-red);
+    padding-bottom: 1rem;
+}
+
+.home .share{
+    position: relative;
+    top: 2rem;
+    padding: 1rem;
+}
+.home .share a{
+    height: 5rem;
+    width: 3rem;
+    line-height: 5rem;
+    margin: .5rem;
+    font-size: 1.8rem;
+    color: var(--black);
+}
+
+.home .share a:hover{
+color: var(--purple-red);
+}
+/* Take me Home */
+
+/* About */
+
+.about .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 3rem;
+}
+
+.about .row .box-container{
+    flex: 1 1 40rem;
+    display: flex;
+    gap: 1.35rem;
+    flex-wrap: wrap;
+}
+
+.about .row .content{
+    flex: 1 1 40rem;
+}
+
+.about .row .content h3{
+    font-size: 2.2rem;
+    line-height: 1.5;
+    color: var(--purple-red);
+}
+
+.about .row .content p{
+    font-size: 1.3rem;
+    color: var(--black);
+    line-height: 1.8;
+}
+
+.about .row .box-container .box{
+    flex: 1 1 26rem;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5rem;
+    box-shadow: var(--box-shadow-light);
+}
+
+.about .row .box-container .box h3{
+    font-size: 4rem;
+    color: var(--purple-red);
+}
+
+.about .row .box-container .box p{
+    font-size: 2rem;
+    color: var(--black);
+    padding: .7rem 0;
+}
+
+.about .row:nth-child(3){
+    padding-top: 3rem;
+}
+
+.about .row .progress{
+    flex: 1 1 40rem;
+}
+
+.about .row .progress h3{
+    color: var(--black);
+    font-weight: bold;
+    font-family: var(--serif-jp);
+    font-size: 1.88rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .row .progress .bar{
+    box-shadow: var(--box-shadow);
+    border-radius: 5rem;
+    height: 2rem;
+    padding: .6rem;
+    margin: 1rem 0;
+}
+
+.about .row .progress .bar span{
+    display: block;
+    height: 100%;
+    background: var(--purple-red);
+    border-radius: 5rem;
+}
+
+.about .row .progress .bar-1-1 span{
+    width: 95%;
+}
+
+.about .row .progress .bar-1-2 span{
+    width: 90%;
+}
+
+.about .row .progress .bar-1-3 span{
+    width: 60%;
+}
+
+.about .row .progress .bar-1-4 span{
+    width: 80%;
+}
+
+.about .row .progress .bar-2-1 span{
+    width: 70%;
+}
+
+.about .row .progress .bar-2-2 span{
+    width: 60%;
+}
+
+.about .row .progress .bar-2-3 span{
+    width: 50%;
+}
+
+.about .row .progress .bar-2-4 span{
+    width: 40%;
+}
+
+/* About */
+
+/* Service */
+
+.service .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+
+.service .box-container .box{
+    padding: 2rem;
+    border-radius: 5rem;
+    box-shadow: var(--box-shadow-light);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.service .box-container .box i{
+    font-size: 4rem;
+    padding-bottom: 3rem;
+    color: var(--purple-red);
+}
+
+.service .box-container .box h3{
+    font-size: 2rem;
+    padding-bottom: .5rem;
+    color: var(--black);
+}
+
+.service .box-container .box p{
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    padding-bottom: .6rem;
+    color: var(--black);
+}
+
+.service .box-container .box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--medium-purple);
+    z-index: -1;
+    clip-path: circle(9rem at 0% 1%);
+    transition: .5s ease-in-out;
+}
+
+.service .box-container .box:hover::before{
+    clip-path: circle(100%);
+}
+
+.service .box-container .box:hover > *{
+    color: var(--purple-red);
+
+}
+
+/* Service */
+
+/* Portfolio */
+
+.portfolio .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 1rem;
+}
+
+.portfolio .box-container .box{
+    height: 25rem;
+    border-radius: 5rem;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    border: 1rem solid transparent;
+}
+
+.portfolio .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portfolio .box-container .box .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--white);
+    display: grid;
+    place-items: center;
+    transform: scale(0);
+}
+
+.portfolio .box-container .box:hover .content{
+    transform: scale(1);
+}
+
+.portfolio .box-container .box .content h3{
+    font-size: 2.2rem;
+    font-family: var(--serif-jp);
+    color: var(--black);
+    transform: translateY(-3rem);
+    opacity: 0;
+    transition-delay: .5sec;
+}
+
+.portfolio .box-container .box:hover .content h3{
+    transform: translateY(0rem);
+    opacity: 1;
+}
+
+/* Portfolio */
+
+/* Contact */
+
+.contact form{
+    margin: 1rem auto;
+    max-width: 60rem;
+    border-radius: 5rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+}
+
+.contact form .box{
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: none;
+    color: var(--black);
+    font-size: 1.6rem;
+    text-transform: none; 
+    margin: .6rem 0;
+    box-shadow: var(--box-shadow-light);
+    border-radius: 5rem;
+}
+
+.contact form textarea{
+    height: 20rem;
+    resize: none;
+}
+
+.contact form .box:focus{
+    box-shadow: var(--box-shadow);
+}
+
+/* Contact */
+
+/* Credits */
+
+.credits{
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: .5rem;
+    border-bottom: var(--border);
+    color: var(--black);
+}
+
+.credits span{
+    color: var(--purple-red);
+}
+
+
+/* Credits */
+
+/* Responsive Way */
+
+@media (max-width:991px){
+    
+    html{
+        font-size: 60%;
+    }
+
+    body{
+        padding-left: 0;
+    }
+    
+
+    .header{
+        left:-100%;
+    }
+
+    .header.active{
+        left: 0%;
+        transition: .4s ease-in-out;
+    }
+
+    #menu-btn{
+        display: initial;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .header{
+        width:100%;
+    }
+
+}
